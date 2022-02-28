@@ -8,6 +8,8 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
+    "@nomiclabs/hardhat-etherscan": "^3.0.1",
+    "dotenv": "^16.0.0",
     "hardhat": "^2.8.4"
   },
   "devDependencies": {
