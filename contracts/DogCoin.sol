@@ -5,6 +5,7 @@ contract DogCoin {
 
   event Transfer(address indexed _from, address indexed _to, uint256 _value);
   event Approval(address indexed _owner, address indexed _spender, uint256 _value);
+  event HolderChange(address indexed _owner, bool _isActive);
 
   string public name;
   string public symbol;
@@ -16,7 +17,7 @@ contract DogCoin {
   mapping(address => uint) private _balances;
   mapping(address => mapping(address => uint256)) private _allowances;
 
-  address[] public holders;
+  address[] private _holders;
   address public immutable deployer;
 
   constructor(
@@ -79,7 +80,11 @@ contract DogCoin {
     success = true;
   }
 
-  function _isholder(address user) internal returns (bool holder) {
+  function holders() public view returns(address[] memory) {
+    return _holders;
+  }
+
+  function _isholder(address user) internal view returns (bool holder) {
     if (user != deployer) {
       if (_holderIndex(user) > 0) {
         holder = true;
@@ -89,22 +94,41 @@ contract DogCoin {
   }
 
   function _holderIndex(address user) internal view returns (uint index) {
-    for (uint256 i = 0; i < holders.length; i++) {
-      if (holders[i] == user) {
+    for (uint256 i = 0; i < _holders.length; i++) {
+      if (_holders[i] == user) {
         index = i;
       }
     }
   }
 
-  function _addHolder(address user) internal {
+  function _addHolder(address user) private {
     require(_balances[user] > 0);
-    holders.push(user);
+    _holders.push(user);
+    emit HolderChange(user, true);
   }
 
-  function _removeHolder(address user) internal {
+  function _removeHolder(address user) private {
     require(_balances[user] == 0);
     uint index = _holderIndex(user);
-    delete holders[index];
+    delete _holders[index];
+    _shuffleHolders(index);
+    emit HolderChange(user, false);
+  }
+
+  function _shuffleHolders(uint _startingIndex) private {
+    bool islastIndexinArray = _startingIndex == _holders.length - 1;
+    if (islastIndexinArray) {
+      _holders.pop();
+    } else {
+      for (uint256 index = _startingIndex; index < _holders.length; index++) {
+        if(index + 1 < _holders.length) {
+          _holders[index] = _holders[index + 1];
+          delete _holders[index + 1];
+        } else {
+          _holders.pop();
+        }
+      }
+    }
   }
 
 }
