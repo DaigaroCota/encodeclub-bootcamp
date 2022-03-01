@@ -22,11 +22,12 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 module.exports = {
   solidity: "0.8.4",
   networks : {
+    localhost: {
+      url: "http://localhost:8545",
+    },
     rinkeby: {
       url: `https://rinkeby.infura.io/v3/${process.env.INFURA_ID}`,
-      accounts: process.env.PRIVATE_KEY ?
-        [process.env.PRIVATE_KEY] :
-        { mnemonic: mnemonic() },
+      accounts: process.env.PRIVATE_KEY 
     }
   },
   etherscan: {
