@@ -1,0 +1,280 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [
+    {
+      "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "txHash": "0xc0baaead95f58e5465ce497a971a711dcbbc521929cf3b72fbb9500d8b91faf1",
+      "kind": "uups"
+    }
+  ],
+  "impls": {
+    "6da6698f490660a5ae05da5414787923dcf2d50ef30cfbea96eab570123a2d7a": {
+      "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "txHash": "0x82fc9993dc28630665a7e66b285f22f50337bff3c16034b920ace3a1b0e01173",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:39"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:44"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ERC1967UpgradeUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol:211"
+          },
+          {
+            "label": "version",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_string_storage",
+            "contract": "DogCoinUpgradeableV1",
+            "src": "contracts/DogCoinUpgradeableV1.sol:12"
+          },
+          {
+            "label": "name",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_string_storage",
+            "contract": "DogCoinUpgradeableV1",
+            "src": "contracts/DogCoinUpgradeableV1.sol:14"
+          },
+          {
+            "label": "symbol",
+            "offset": 0,
+            "slot": "53",
+            "type": "t_string_storage",
+            "contract": "DogCoinUpgradeableV1",
+            "src": "contracts/DogCoinUpgradeableV1.sol:15"
+          },
+          {
+            "label": "decimals",
+            "offset": 0,
+            "slot": "54",
+            "type": "t_uint256",
+            "contract": "DogCoinUpgradeableV1",
+            "src": "contracts/DogCoinUpgradeableV1.sol:17"
+          },
+          {
+            "label": "totalSupply",
+            "offset": 0,
+            "slot": "55",
+            "type": "t_uint256",
+            "contract": "DogCoinUpgradeableV1",
+            "src": "contracts/DogCoinUpgradeableV1.sol:19"
+          },
+          {
+            "label": "_balances",
+            "offset": 0,
+            "slot": "56",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "DogCoinUpgradeableV1",
+            "src": "contracts/DogCoinUpgradeableV1.sol:21"
+          },
+          {
+            "label": "_allowances",
+            "offset": 0,
+            "slot": "57",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "contract": "DogCoinUpgradeableV1",
+            "src": "contracts/DogCoinUpgradeableV1.sol:22"
+          },
+          {
+            "label": "_holders",
+            "offset": 0,
+            "slot": "58",
+            "type": "t_array(t_address)dyn_storage",
+            "contract": "DogCoinUpgradeableV1",
+            "src": "contracts/DogCoinUpgradeableV1.sol:24"
+          },
+          {
+            "label": "deployer",
+            "offset": 0,
+            "slot": "59",
+            "type": "t_address",
+            "contract": "DogCoinUpgradeableV1",
+            "src": "contracts/DogCoinUpgradeableV1.sol:25"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          }
+        }
+      }
+    },
+    "b4a6d0d7de9f679ef7aad1a9256e3f51693b3c50b50b8592a6ac695d0f092c18": {
+      "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+      "txHash": "0x8189800cb047bd9a90cb3e2b1255759c845357d94dce1f3dce04f0338b50064f",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:39"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:44"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ERC1967UpgradeUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol:211"
+          },
+          {
+            "label": "version",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_string_storage",
+            "contract": "DogCoinUpgradeableV2",
+            "src": "contracts/DogCoinUpgradeableV2.sol:12"
+          },
+          {
+            "label": "name",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_string_storage",
+            "contract": "DogCoinUpgradeableV2",
+            "src": "contracts/DogCoinUpgradeableV2.sol:14"
+          },
+          {
+            "label": "symbol",
+            "offset": 0,
+            "slot": "53",
+            "type": "t_string_storage",
+            "contract": "DogCoinUpgradeableV2",
+            "src": "contracts/DogCoinUpgradeableV2.sol:15"
+          },
+          {
+            "label": "decimals",
+            "offset": 0,
+            "slot": "54",
+            "type": "t_uint256",
+            "contract": "DogCoinUpgradeableV2",
+            "src": "contracts/DogCoinUpgradeableV2.sol:17"
+          },
+          {
+            "label": "totalSupply",
+            "offset": 0,
+            "slot": "55",
+            "type": "t_uint256",
+            "contract": "DogCoinUpgradeableV2",
+            "src": "contracts/DogCoinUpgradeableV2.sol:19"
+          },
+          {
+            "label": "_balances",
+            "offset": 0,
+            "slot": "56",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "DogCoinUpgradeableV2",
+            "src": "contracts/DogCoinUpgradeableV2.sol:21"
+          },
+          {
+            "label": "_allowances",
+            "offset": 0,
+            "slot": "57",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "contract": "DogCoinUpgradeableV2",
+            "src": "contracts/DogCoinUpgradeableV2.sol:22"
+          },
+          {
+            "label": "_holders",
+            "offset": 0,
+            "slot": "58",
+            "type": "t_array(t_address)dyn_storage",
+            "contract": "DogCoinUpgradeableV2",
+            "src": "contracts/DogCoinUpgradeableV2.sol:24"
+          },
+          {
+            "label": "deployer",
+            "offset": 0,
+            "slot": "59",
+            "type": "t_address",
+            "contract": "DogCoinUpgradeableV2",
+            "src": "contracts/DogCoinUpgradeableV2.sol:25"
+          },
+          {
+            "label": "newVariable",
+            "offset": 0,
+            "slot": "60",
+            "type": "t_uint256",
+            "contract": "DogCoinUpgradeableV2",
+            "src": "contracts/DogCoinUpgradeableV2.sol:27"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          }
+        }
+      }
+    }
+  }
+}
