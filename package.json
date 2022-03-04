@@ -13,7 +13,8 @@
     "@openzeppelin/hardhat-upgrades": "^1.15.0",
     "dotenv": "^16.0.0",
     "hardhat": "^2.8.4",
-    "hardhat-ethers": "^1.0.1"
+    "hardhat-ethers": "^1.0.1",
+    "hardhat-gas-reporter": "^1.0.8"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.0",
