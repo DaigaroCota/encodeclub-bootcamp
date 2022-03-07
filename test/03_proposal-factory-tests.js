@@ -23,12 +23,13 @@ describe("Proposal Factory Tests", function () {
   });
 
   it("Should deploy a Proposal Contract from factory", async () => {
+    const currentblockNum = await provider.getBlockNumber();
     await factory.createProposal(
       [],
       accounts[1].address,
-      await provider.getBlockNumber(),
-      5,
-      5
+      currentblockNum,
+      currentblockNum + 5,
+      currentblockNum + 10
     );
 
     const listedProposals = await factory.getListedProposals();
