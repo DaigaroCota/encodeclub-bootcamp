@@ -3,7 +3,6 @@ const { ethers } = require("hardhat");
 
 describe("DogCoin Tests", function () {
 
-  let provider;
   let accounts;
   let deployer;
   let dogcoin;
@@ -13,7 +12,6 @@ describe("DogCoin Tests", function () {
   
   before(async () => {
 
-    provider = ethers.getDefaultProvider("http://localhost:8545");
     accounts = await ethers.getSigners();
     deployer = accounts[0];
     transferAmount = ethers.utils.parseUnits("5000", 18);

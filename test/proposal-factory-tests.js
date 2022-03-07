@@ -14,7 +14,7 @@ describe("Proposal Factory Tests", function () {
   
   before(async () => {
 
-    provider = ethers.getDefaultProvider("http://localhost:8545");
+    provider = ethers.getDefaultProvider();
     accounts = await ethers.getSigners();
     deployer = accounts[0];
 

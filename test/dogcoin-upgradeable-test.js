@@ -3,14 +3,12 @@ const { ethers, upgrades } = require("hardhat");
 
 describe("DogCoin Upgradeable Tests", function () {
 
-  let provider;
   let accounts;
   let deployer;
   let dogcoin;
   
   before(async () => {
-
-    provider = ethers.getDefaultProvider("http://localhost:8545");
+    
     accounts = await ethers.getSigners();
     deployer = accounts[0];
 
